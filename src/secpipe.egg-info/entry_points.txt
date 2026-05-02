@@ -1,2 +1,0 @@
-[console_scripts]
-secpipe = secpipe.cli:main

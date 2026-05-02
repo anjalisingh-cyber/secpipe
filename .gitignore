@@ -1,10 +1,16 @@
-# SecPipe specific
-.secpipe.yaml
+cd ~/secpipe
+cat >> .gitignore << 'EOF'
 
-# IDE
-.vscode/
-.idea/
+# Virtual environment
+.venv/
 
-# OS
-.DS_Store
-Thumbs.db
+# Python cache
+__pycache__/
+*.pyc
+
+# Egg info
+*.egg-info/
+
+# Setup script (not needed in repo)
+setup_code.sh
+EOF
