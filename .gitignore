@@ -1,0 +1,10 @@
+# SecPipe specific
+.secpipe.yaml
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
