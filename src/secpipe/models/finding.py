@@ -2,7 +2,6 @@
 
 from dataclasses import dataclass
 from enum import Enum
-from typing import Optional
 
 
 class Severity(Enum):
@@ -34,7 +33,7 @@ class Finding:
     rule_id: str
     severity: Severity
     file_path: str
-    line_number: Optional[int]
+    line_number: int | None
     title: str
     description: str
     remediation: str

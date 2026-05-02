@@ -6,7 +6,6 @@ from pathlib import Path
 from secpipe.models.finding import Finding, Severity
 from secpipe.scanner.base import BaseScanner
 
-
 # Each rule is a tuple of: (rule_id, title, regex_pattern, severity, remediation)
 SECRET_PATTERNS: list[tuple[str, str, str, Severity, str]] = [
     (

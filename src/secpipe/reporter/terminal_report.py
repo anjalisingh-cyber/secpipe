@@ -4,7 +4,6 @@ import click
 
 from secpipe.models.finding import Finding, Severity
 
-
 # Colour mapping for severity levels
 SEVERITY_COLOURS: dict[Severity, str] = {
     Severity.CRITICAL: "red",
