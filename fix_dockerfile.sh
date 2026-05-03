@@ -1,3 +1,8 @@
+#!/bin/bash
+# Fix dockerfile.py line length issues
+cd ~/secpipe
+
+cat > src/secpipe/scanner/dockerfile.py << 'ENDFILE'
 """Scanner for Dockerfile security misconfigurations."""
 
 import re
@@ -334,3 +339,7 @@ class DockerfileScanner(BaseScanner):
                 )
 
         return findings
+ENDFILE
+
+echo "Fixed dockerfile.py"
+echo "Now run: ruff check src/"
