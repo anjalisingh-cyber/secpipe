@@ -9,6 +9,8 @@ from secpipe.models.finding import Finding, Severity
 from secpipe.reporter.json_report import generate_json_report
 from secpipe.reporter.terminal_report import print_terminal_report
 from secpipe.scanner.base import BaseScanner
+from secpipe.scanner.dependencies import DependencyScanner
+from secpipe.scanner.dockerfile import DockerfileScanner
 from secpipe.scanner.secrets import SecretsScanner
 
 
@@ -16,6 +18,8 @@ def get_all_scanners() -> list[BaseScanner]:
     """Return a list of all available scanner instances."""
     return [
         SecretsScanner(),
+        DependencyScanner(),
+        DockerfileScanner(),
     ]
 
 

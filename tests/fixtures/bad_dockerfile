@@ -1,0 +1,8 @@
+FROM python:latest
+RUN apt-get update && apt-get install curl
+ENV API_SECRET=my_super_secret_key
+ADD app.tar.gz /app
+WORKDIR /app
+RUN pip install -r requirements.txt
+EXPOSE 8080
+CMD ["python", "app.py"]
